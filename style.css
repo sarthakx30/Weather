@@ -90,7 +90,6 @@ body{
 }
 .day{
     border: 1px solid rgb(192, 191, 191);
-    /* height: %; */
     font-size: 18px;
     font-weight: 400;
     color:white;
@@ -105,7 +104,7 @@ body{
 #day-name{
     background:rgba(124, 124, 124, 0.5);
     padding: 5px 15px;
-    margin: 5px;
+    margin: 10px;
     border-radius:20px;
     font-weight: 800;
     font-style: italic;
@@ -128,6 +127,13 @@ body{
         overflow-y: scroll;
     }
     .day{
+        width: fit-content;
         font-size:25px;
+    }
+}
+@media(max-width:1390px){
+    .future-forecast{
+        justify-content: start;
+        overflow-x: scroll;
     }
 }
