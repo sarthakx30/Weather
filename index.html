@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
-    <script src="script.js"></script>
     <title>Weather</title>
 </head>
 <body>
@@ -13,10 +12,10 @@
         <div class="current-info">
             <div class="date-container">
                 <div class="date">
-                    Sunday , 14 Feb
+                    <span id="day">Sunday</span> , <span id="date">14</span> <span id="month">Feb</span>
                 </div>
                 <div class="time-container">
-                    5:30<span id="am-pm">PM</span>
+                    <span id="time">5:30</span><span id="am-pm">PM</span>
                 </div>
             </div>
 
@@ -40,10 +39,10 @@
             </div>
         </div>
         <div class="place-container">
-            <div class="time-zone">
+            <div class="time-zone" id="time-zone">
                 Asia/Kolkata
             </div>
-            <div class="country">India</div>
+            <div class="country" id="country">India</div>
         </div>
     </div>
     <div class="future-forecast">
@@ -105,4 +104,5 @@
         </div>
     </div>
 </body>
+<script src="script.js"></script>
 </html>
