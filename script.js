@@ -54,6 +54,25 @@ function showWeather(data) {
     curr_pressure.innerHTML=pressure;
     curr_wind_speed.innerHTML=wind_speed;
     curr_temp.innerHTML=Math.round(temp);
+    document.getElementById("time-zone").innerHTML=data.timezone;
+
+    let weatherForecast='';
+    data.daily.forEach((day,index) => {
+        if(index!=0){
+            console.log(dayjs(day.dt*1000));
+            weatherForecast+=`
+            <div class="day">
+                <p class="day-name">${dayjs(day.dt*1000).format('dddd')}</p>
+                <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
+                <div class="weather-item">
+                    <p>Temperature</p>
+                    <p>${Math.round(day.temp.min)}&#8451; - ${Math.round(day.temp.max)}&#8451;</p>
+                </div>
+            </div>
+        `
+        }
+    });
+    document.getElementById("future-forecast").innerHTML=weatherForecast;
 }
 
 getWeatherData();
